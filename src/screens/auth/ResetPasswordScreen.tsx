@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { View, Text, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
-import { supabase } from "../lib/supabase";
-import { useTheme } from "../theme/ThemeProvider";
-import { makeSkin } from "../theme/skin";
-import { Input } from "../ui/Input";
-import { Button } from "../ui/Button";
-import { Card } from "../ui/Card";
+import { supabase } from "../../lib/supabase";
+import { useTheme } from "../../theme/ThemeProvider";
+import { makeSkin } from "../../theme/skin";
+import { Input } from "../../ui/Input";
+import { Button } from "../../ui/Button";
+import { Card } from "../../ui/Card";
 
 export default function ResetPasswordScreen() {
   const nav = useNavigation<any>();

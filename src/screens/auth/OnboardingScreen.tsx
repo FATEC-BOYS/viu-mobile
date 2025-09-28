@@ -11,9 +11,9 @@ import {
   ListRenderItemInfo,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { useTheme } from "../theme/ThemeProvider";
-import { makeSkin } from "../theme/skin";
-import { Button, ButtonGhost } from "../ui/Button";
+import { useTheme } from "../../theme/ThemeProvider";
+import { makeSkin } from "../../theme/skin";
+import { Button, ButtonGhost } from "../../ui/Button";
 
 const { width } = Dimensions.get("window");
 

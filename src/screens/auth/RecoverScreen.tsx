@@ -3,12 +3,12 @@ import { View, Text, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import * as Linking from "expo-linking";
 
-import { supabase } from "../lib/supabase";
-import { useTheme } from "../theme/ThemeProvider";
-import { makeSkin } from "../theme/skin";
-import { Input } from "../ui/Input";
-import { Button } from "../ui/Button";
-import { Card } from "../ui/Card";
+import { supabase } from "../../lib/supabase";
+import { useTheme } from "../../theme/ThemeProvider";
+import { makeSkin } from "../../theme/skin";
+import { Input } from "../../ui/Input";
+import { Button } from "../../ui/Button";
+import { Card } from "../../ui/Card";
 
 export default function RecoverScreen() {
   const nav = useNavigation<any>();

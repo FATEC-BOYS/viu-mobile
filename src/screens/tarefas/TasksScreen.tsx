@@ -7,12 +7,12 @@ import {
   Modal,
   ActivityIndicator,
 } from "react-native";
-import { supabase } from "../lib/supabase";
-import { useTheme } from "../theme/ThemeProvider";
-import { makeSkin } from "../theme/skin";
-import { Card } from "../ui/Card";
-import { Input } from "../ui/Input";
-import { Button, ButtonGhost } from "../ui/Button";
+import { supabase } from "../../lib/supabase";
+import { useTheme } from "../../theme/ThemeProvider";
+import { makeSkin } from "../../theme/skin";
+import { Card } from "../../ui/Card";
+import { Input } from "../../ui/Input";
+import { Button, ButtonGhost } from "../../ui/Button";
 
 /* ===================== Tipos ===================== */
 

@@ -3,12 +3,12 @@ import { View, Text, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import * as AuthSession from "expo-auth-session";
 
-import { supabase } from "../lib/supabase";
-import { useTheme } from "../theme/ThemeProvider";
-import { makeSkin } from "../theme/skin";
-import { Input } from "../ui/Input";
-import { Button, ButtonGhost } from "../ui/Button";
-import { Card } from "../ui/Card";
+import { supabase } from "../../lib/supabase";
+import { useTheme } from "../../theme/ThemeProvider";
+import { makeSkin } from "../../theme/skin";
+import { Input } from "../../ui/Input";
+import { Button, ButtonGhost } from "../../ui/Button";
+import { Card } from "../../ui/Card";
 
 type TipoUsuario = "DESIGNER" | "CLIENTE";
 
