@@ -1,20 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// App.tsx
+import React from "react";
+import { StatusBar } from "react-native";
+import { AuthProvider } from "./src/contexts/AuthContext";
+import { ThemeProvider } from "./src/theme/ThemeProvider";
+import Root from "./src/Root/Root";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    // forcedMode="dark" para testar o tema escuro; remova para seguir o sistema
+    <ThemeProvider /* forcedMode="dark" */>
+      <AuthProvider>
+        <StatusBar
+          barStyle="dark-content" // troca para "light-content" se for forçar dark
+          backgroundColor="transparent"
+          translucent
+        />
+        <Root />
+      </AuthProvider>
+    </ThemeProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
