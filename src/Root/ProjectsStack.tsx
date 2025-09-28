@@ -3,9 +3,9 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useTheme } from "../theme/ThemeProvider";
 
-// telas da aba Projetos
-import ProjectsScreen from "../screens/ProjectsScreen";      // lista
-import ProjectDetails from "../screens/ProjectDetails";      // detalhe
+import ProjectsScreen from "../screens/projetos/ProjectsScreen";
+import ProjectDetails from "../screens/projetos/ProjectDetails";
+import { AppHeader } from "../components/AppHeader";
 
 export type ProjectsStackParamList = {
   ProjectsList: undefined;
@@ -21,22 +21,24 @@ export default function ProjectsStack() {
     <Stack.Navigator
       screenOptions={{
         headerShown: true,
-        headerStyle: { backgroundColor: t.colors.card },
-        headerTintColor: t.colors.foreground,
-        headerTitleStyle: { color: t.colors.foreground },
+        // Reaproveita o AppHeader nas telas internas
+        header: () => <AppHeader title="Projetos" />,
         contentStyle: { backgroundColor: t.colors.background },
       }}
     >
       <Stack.Screen
         name="ProjectsList"
         component={ProjectsScreen}
-        options={{ title: "Projetos" }}
+        // O header base já mostra "Projetos", então não precisa sobrescrever
       />
 
       <Stack.Screen
         name="Project"
         component={ProjectDetails}
-        options={({ route }) => ({ title: route.params.nome || "Projeto" })}
+        // Título dinâmico com nome do projeto
+        options={({ route }) => ({
+          header: () => <AppHeader title={route.params.nome || "Projeto"} />,
+        })}
       />
     </Stack.Navigator>
   );

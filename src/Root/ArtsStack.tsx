@@ -1,34 +1,44 @@
+// src/Root/ArtsStack.tsx
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useTheme } from "../theme/ThemeProvider";
 
-import ArtsList from "../screens/ArtsList";        // lista (placeholder)
-import ArtDetails from "../screens/ArtDetails";    // detalhe (seu arquivo renomeado)
+import ArtsList from "../screens/artes/ArtsList";
+import ArtDetails from "../screens/artes/ArtDetails";
+import { AppHeader } from "../components/AppHeader";
 
-export type ArtsStackParamList = {
-  ArtsList: undefined;
-  Art: { arteId: string; titulo?: string };
+export type ArtesStackParamList = {
+  Artes: undefined;
+  ArteDetails: { id: string; titulo?: string };
 };
 
-const Stack = createNativeStackNavigator<ArtsStackParamList>();
+const Stack = createNativeStackNavigator<ArtesStackParamList>();
 
 export default function ArtsStack() {
   const { t } = useTheme();
+
   return (
     <Stack.Navigator
       screenOptions={{
         headerShown: true,
-        headerStyle: { backgroundColor: t.colors.card },
-        headerTintColor: t.colors.foreground,
-        headerTitleStyle: { color: t.colors.foreground },
+        // usa o AppHeader como header base
+        header: () => <AppHeader title="Artes" />,
         contentStyle: { backgroundColor: t.colors.background },
       }}
     >
-      <Stack.Screen name="ArtsList" component={ArtsList} options={{ title: "Artes" }} />
       <Stack.Screen
-        name="Art"
+        name="Artes"
+        component={ArtsList}
+        // como o header padrão já é o AppHeader com título "Artes",
+        // não precisamos sobrescrever aqui
+      />
+      <Stack.Screen
+        name="ArteDetails"
         component={ArtDetails}
-        options={({ route }) => ({ title: route.params.titulo ?? "Arte" })}
+        // sobrescreve o header para título dinâmico
+        options={({ route }) => ({
+          header: () => <AppHeader title={route.params.titulo ?? "Arte"} />,
+        })}
       />
     </Stack.Navigator>
   );

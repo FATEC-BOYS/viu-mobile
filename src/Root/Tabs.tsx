@@ -6,11 +6,11 @@ import { useTheme } from "../theme/ThemeProvider";
 import { useCounters } from "../hooks/useCounters";
 
 // telas
-import HomeScreen from "../screens/HomeScreen";
+import HomeScreen from "../screens/dashboard/HomeScreen";
 import ProjectsStack from "./ProjectsStack";          
 import ArtsStack from "./ArtsStack";
-import TasksScreen from "../screens/TasksScreen";      
-import NotificationsScreen from "../screens/NotificationsScreen"; 
+import TasksScreen from "../screens/tarefas/TasksScreen";      
+import NotificationsScreen from "../screens/notificacoes/NotificationsScreen"; 
 
 // Tipagem das tabs (opcional mas recomendado)
 export type AppTabParamList = {

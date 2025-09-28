@@ -11,11 +11,11 @@ import {
 import * as Linking from "expo-linking";
 import { useNavigation } from "@react-navigation/native";
 
-import { supabase } from "../lib/supabase";
-import { useTheme } from "../theme/ThemeProvider";
-import { makeSkin } from "../theme/skin";
-import { Card } from "../ui/Card";
-import { Button, ButtonGhost } from "../ui/Button";
+import { supabase } from "../../lib/supabase";
+import { useTheme } from "../../theme/ThemeProvider";
+import { makeSkin } from "../../theme/skin";
+import { Card } from "../../ui/Card";
+import { Button, ButtonGhost } from "../../ui/Button";
 
 type Notificacao = {
   id: string;

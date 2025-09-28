@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
-import { ProjectsStackParamList } from "../Root/ProjectsStack";
+import { ProjectsStackParamList } from "../../Root/ProjectsStack";
 
 type Props = NativeStackScreenProps<ProjectsStackParamList, "Project">;
 

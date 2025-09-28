@@ -3,9 +3,9 @@ import React, { useEffect, useState } from "react";
 import { View, Text, FlatList, Pressable, RefreshControl } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 
-import { listProjetos } from "../api";
-import { Projeto } from "../types";
-import { ProjectsStackParamList } from "../Root/ProjectsStack"; // <-- importe o tipo do stack
+import { listProjetos } from "../../api";
+import { Projeto } from "../../types";
+import { ProjectsStackParamList } from "../../Root/ProjectsStack"; // <-- importe o tipo do stack
 
 type Props = NativeStackScreenProps<ProjectsStackParamList, "ProjectsList">;
 

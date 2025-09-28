@@ -3,12 +3,12 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useAuth } from "../contexts/AuthContext";
-import OnboardingScreen from "../screens/OnboardingScreen";
-import LoginScreen from "../screens/LoginScreen";
-import SignupScreen from "../screens/SignupScreen";
-import RecoverScreen from "../screens/RecoverScreen";
-import AuthCallbackScreen from "../screens/AuthCallbackScreen";
-import ResetPasswordScreen from "../screens/ResetPasswordScreen";
+import OnboardingScreen from "../screens/auth/OnboardingScreen";
+import LoginScreen from "../screens/auth/LoginScreen";
+import SignupScreen from "../screens/auth/SignupScreen";
+import RecoverScreen from "../screens/auth/RecoverScreen";
+import AuthCallbackScreen from "../screens/auth/AuthCallbackScreen";
+import ResetPasswordScreen from "../screens/auth/ResetPasswordScreen";
 import AppShell from "../Root/AppShell";
 
 export type RootStackParamList = {

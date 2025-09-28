@@ -3,13 +3,13 @@ import { View, Text, Pressable } from "react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import * as AuthSession from "expo-auth-session";
 
-import { useAuth } from "../contexts/AuthContext";
-import { supabase } from "../lib/supabase";
-import { useTheme } from "../theme/ThemeProvider";
-import { makeSkin } from "../theme/skin";
-import { Input } from "../ui/Input";
-import { Button, ButtonGhost } from "../ui/Button";
-import { Card } from "../ui/Card";
+import { useAuth } from "../../contexts/AuthContext";
+import { supabase } from "../../lib/supabase";
+import { useTheme } from "../../theme/ThemeProvider";
+import { makeSkin } from "../../theme/skin";
+import { Input } from "../../ui/Input";
+import { Button, ButtonGhost } from "../../ui/Button";
+import { Card } from "../../ui/Card";
 
 export default function LoginScreen() {
   const nav = useNavigation<any>();
